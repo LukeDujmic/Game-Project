@@ -1,0 +1,218 @@
+<!doctype HTML>
+
+<!-- PROJECT CREATED BY 
+
+ Luke Dujmic
+
+ Veronica Tisdel
+
+ -->
+<html>
+    <head>
+        <title>MAZE GAME</title>
+
+        
+        <link rel="stylesheet" type="text/css" href="css/maze.css">
+
+        
+    </head>
+    
+    <!--moveUp(event),moveDown(event),moveRight(event),moveLeft(event)-->
+    <body onkeydown="move(event)">
+        <div class="head">
+            Do you know the way maze
+        </div>
+
+        <div id="gameInfo">
+            <p>Time Alloted:</p>
+            <div class="time">
+
+            <a id="minuteDisplay"></a>
+            <a id="secondDisplay"></a>
+            </div>
+
+            <div id="lifeDisplay"></div>
+            <div id="scoreDisplay"></div>
+
+            <div id="coinDisplay"></div>
+        </div>
+
+        <button onclick="createTable1()" id="L1BUTTON" style='display: block;'>Level 1</button>
+        <button onclick="createTable2()" id="L2BUTTON" style='display: block;'>Level 2</button>
+        <button onclick="createTable3()" id="L3BUTTON" style='display: block;'>Level 3</button>
+        
+        <div id="whens">
+            
+        </div>
+        
+
+
+        <!--Table Row setup, and columns-->
+
+        <!--<table id ="L1">
+            <tr id="y0">
+                <td id="P4-0" class="player">
+
+
+                <td id="P3-0" class="block">
+
+                </td>
+
+
+                <td id="P2-0" class="block">
+
+                </td>
+
+
+                <td id="P1-0" class="block">
+                    <img src="images/coin.gif" style="width:100%;">
+                </td>
+
+
+                <td id="P0-0" class="block">
+
+                </td>
+            </tr>
+
+            <tr id="y1">
+                <td id="P4-1" class="path">
+
+                </td>
+
+                <td id="P3-1" class="block">
+
+                </td>
+
+
+                <td id="P2-1" class="block">
+
+                </td>
+
+
+                <td id="P1-1" class="block">
+
+                </td>
+
+
+                <td id="P0-1" class="block">
+
+                </td>
+            </tr>
+
+            <tr id="y2">
+                <td id="P4-2" class="path">
+
+                </td>
+
+
+                <td id="P3-2" class="path">
+
+                </td>
+
+
+                <td id="P2-2" class="path">
+
+                </td>
+
+
+                <td id="P1-2" class="obstacle">
+
+                </td>
+
+
+                <td id="P0-2" class="path">
+
+                </td>
+            </tr>
+
+            <tr id="y3">
+                <td id="P4-3" class="block">
+
+                </td>
+
+
+                <td id="P3-3" class="block">
+
+                </td>
+
+
+                <td id="P2-3" class="path">
+
+                </td>
+
+
+                <td id="P1-3" class="block">
+
+                </td>
+
+
+                <td id="P0-3" class="path">
+
+                </td>
+            </tr>
+
+            <tr id="y4">
+                <td id="P4-4" class="block">
+
+                </td>
+
+
+                <td id="P3-4" class="block">
+
+                </td>
+
+
+                <td id="P2-4" class="path">
+
+                </td>
+
+
+                <td id="P1-4" class="path">
+
+                </td>
+
+
+                <td id="P0-4" class="finish">
+
+                </td>
+            </tr>
+
+
+
+        </table>-->
+
+        <div class="keey">
+            <table>
+                <tr><th colspan="2">Key</th></tr>
+                <tr>
+                    <td style="font-size: 1.7em;">!!!</td>
+                    <td><p>To reset the level, click on a different level and go back!</p></td>
+                </tr>
+                <tr>
+                    <td><img src="images/still.png"></td>
+                    <td><p>This is a standing obstacle.  It will take a life away if you run into it.  These can be invisible, hover over them to reveal.</p></td>
+                </tr>
+                <tr>
+                    <td><img src="images/moving.png"></td>
+                    <td><p>This is a moving obstacle.  It will also take a life away, but it moves.</p></td>
+                </tr>
+                <tr>
+                    <td><img src="images/coin.gif"></td>
+                    <td><p>Collect coins to earn 25 points.  Try and get them all!</p></td>
+                </tr>
+                <tr>
+                    <td><img src="images/Finish.png"></td>
+                    <td><p>This is the finish line.  Reach this point to complete the maze.</p></td>
+                </tr>
+
+                <tr>
+                    <td style="font-size: 1.7em;">Score Mechanics</td>
+                    <td><p>You lose 10 points every second. You lose one point for moving one spot. You lose 100 points for getting hit by an obstacle. You gain 25 points for touching a coin.</p></td>
+                </tr>
+            </table>
+        </div>
+
+
+        <script src="js/maze.js"></script>
+    </body>
+</html>
